@@ -1,0 +1,46 @@
+.vision-passion-results {
+  background-image: url("../images/Shapes_dark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  @include flex-center;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+
+  &__mission {
+    text-align: center;
+
+    @include mobile {
+      width: 80vw;
+    }
+  }
+
+  &__slogan {
+    padding-top: 24px;
+    width: 754px;
+    @include text-block;
+    text-align: center;
+
+    @include iPad {
+      width: 558px;
+    }
+
+    @include mobile {
+      width: 80vw;
+    }
+  }
+
+  &__button {
+    @include link;
+    margin-top: 64px;
+    width: 264px;
+    height: 56px;
+
+    @include mobile {
+      width: 280px;
+      margin-top: 56px;
+    }
+  }
+}

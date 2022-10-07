@@ -1,6 +1,174 @@
-@mixin hover($_property, $_toValue) {
-  transition: #{$_property} 0.3s;
-  &:hover {
-    #{$_property}: $_toValue;
+@mixin link {
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+@mixin center-position {
+  max-width: 1146px;
+  margin: 0 auto;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin header-footer-link {
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 150%;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@mixin block-title {
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 150%;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #c0cdd7;
+}
+
+@mixin text-block {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  color: $text;
+
+  @include mobile {
+    font-size: 22px;
+  }
+}
+
+// media //
+@mixin mobile {
+  @media (min-width: 320px) and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin iPad {
+  @media (min-width: 768px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: 1280px) and (max-width: 1919px) {
+    @content;
+  }
+}
+
+@mixin full {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
+
+// page-color //
+@mixin page-color {
+  .main-content__conteiner--strategic-agency {
+    background-color: #008aff;
+    border-radius: 0 0 0 100px;
+  }
+  .button {
+    background-color: #ff9c8e;
+    border-color: #ff9c8e;
+    border-radius: 64px;
+  }
+  .header__theme {
+    background: url("../images/moon-fill.svg") no-repeat center;
+  }
+  .slider__slideImg {
+    border-radius: 100px 0 0;
+  }
+  .expertise {
+    border-radius: 0;
+  }
+  .page__header-footer-link {
+    &:hover {
+      border-bottom: 2px solid #ff9c8e;
+    }
+  }
+  .services__card-number--1 {
+    background-color: rgba(86, 204, 242, 0.1);
+    color: #56ccf2;
+  }
+  .services__link--1 {
+    background-color: #56ccf2;
+  }
+  .services__card-number--2 {
+    background-color: rgba(252, 201, 29, 0.1);
+    color: #fcc91d;
+  }
+  .services__link--2 {
+    background-color: #fcc91d;
+  }
+  .services__card-number--3 {
+    background-color: rgba(21, 216, 80, 0.1);
+    color: #15d850;
+  }
+  .services__link--3 {
+    background-color: #15d850;
+  }
+  .services__card-number--4 {
+    background-color: rgba(243, 99, 99, 0.1);
+    color: #f36363;
+  }
+  .services__link--4 {
+    background-color: #f36363;
+  }
+  .testimonial__card--1 .testimonial__element--1,
+  .testimonial__card--1 .testimonial__element--2 {
+    background-color: #56ccf2;
+  }
+  .testimonial__card--1 .testimonial__quotes--1 {
+    background-image: url("../images/testimonials/quotes-blue.png");
+  }
+  .testimonial__card--2 .testimonial__element--1,
+  .testimonial__card--2 .testimonial__element--2 {
+    background-color: #fcc304;
+  }
+  .testimonial__quotes--2 {
+    background-image: url("../images/testimonials/quotes-yellow.png");
+  }
+  .testimonial__card--3 .testimonial__element--1,
+  .testimonial__card--3 .testimonial__element--2 {
+    background-color: #f25656;
+  }
+  .testimonial__quotes--3 {
+    background-image: url("../images/testimonials/quotes-red.png");
+  }
+  .vision-passion-results {
+    background-image: url("../images/Shapes_color.svg");
+  }
+  .main-content__conteiner--contact-us {
+    background-color: #008aff;
+    border-radius: 0 100px 0 0;
+  }
+  .send-us__form-label {
+    &:hover {
+      border-bottom: 1px solid #f25656;
+    }
+  }
+}
+
+// анимация
+@mixin scroll-appearance {
+  transition: all 1.2s ease-in-out 0.1s;
+  opacity: 0;
+
+  &._active {
+    opacity: 1;
   }
 }

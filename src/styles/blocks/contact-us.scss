@@ -1,0 +1,96 @@
+.contact-us {
+  display: flex;
+  justify-content: space-between;
+  height: max-content;
+  width: 100%;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    justify-content: start;
+    height: 1083px;
+  }
+
+  &__info {
+    box-sizing: border-box;
+    width: 362px;
+    height: 415px;
+
+    @include iPad {
+      height: 396px;
+    }
+
+    @include mobile {
+      width: 280px;
+      height: 408px;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    color: #fff;
+    padding-bottom: 56px;
+    width: max-content;
+
+    @include mobile {
+      padding-bottom: 48px;
+    }
+
+    @media (max-width: 360px) {
+      width: 280px;
+    }
+  }
+
+  &__section {
+    padding-bottom: 8px;
+    @include block-title;
+
+    &:last-child {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__contacts {
+    display: inline-block;
+    @include link;
+    padding-bottom: 48px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #fff;
+    transition: opacity $transition-time;
+
+    &:hover {
+      color: $blueColor;
+      opacity: 0.5;
+    }
+  }
+
+  &__networks {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+  }
+
+  &__networks-logo {
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+
+    &:nth-child(1) {
+      background: url("../images/network/facebook.svg") no-repeat center;
+    }
+
+    &:nth-child(2) {
+      background: url("../images/network/white_twitter_bird.png") no-repeat center;
+    }
+
+    &:nth-child(3) {
+      background: url("../images/network/instagram.svg");
+    }
+
+    &:hover {
+      fill: $blueColor;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.button {
+  @include flex-center;
+  background: $blueColor;
+  border-color: $blueColor;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform $transition-time;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.4);
+  }
+}
